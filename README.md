@@ -1,2 +1,2 @@
-# Projekt nr1 
-## autor: Łukasz Baran
+# Projekt nr1 - Techniki WWW
+# Autor: Łukasz Baran
