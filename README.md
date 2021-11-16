@@ -1,1 +1,2 @@
-# projekt1-WWW
+# Projekt nr1 
+## autor: Łukasz Baran
