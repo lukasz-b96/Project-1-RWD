@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;1,700&display=swap');
+
+/* MAIN CONTENT */
+
+:root {
+    --primary-color: #f10f20;
+    /* custom variable */
+}
+
+* {
+    box-sizing: border-box margin 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #000000;
+    font-size: 16px;
+    background: transparent;
+    /* default 16 */
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+p {
+    margin: 20px 0 10x 0;
+    /* clock, top, right, bottom, left */
+    font: 1.1rem;
+    /* Relative to font-size of the root element */
+    /* multiply by root element (16px*1.1) */
+}
+
+section {
+    position: unset;
+    display: flex;
+    /* flex-box - "elastic boxes" */
+    flex-direction: column;
+    height: 100vh;
+    /* 1% of the height of the viewport */
+    align-items: center;
+    /* set it in center */
+    padding: 100px;
+    margin-top: 60px;
+}
+
+section.home {
+    flex-direction: row;
+    margin-top: 0;
+}
+
+
+/* if the section has the class home */
+
+
+/* BUTTON CONTENT */
+
+.btn {
+    cursor: pointer;
+    /* little hover effect */
+    display: inline-block;
+    /* links are dislayed in-line by default (margin would not work)*/
+    background: var(--primary-color);
+    /* color as a variable */
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+    /* 10px top and bottom, 30px left and right */
+    margin: 10px 0px;
+    border: 3px;
+    border-color: black;
+    border-style: outset;
+}
+
+.btn:hover {
+    transform: scale(0.97);
+    /* scale a little bit */
+}
+
+
+/* LOGO CONTENT */
+
+.logo {
+    position: absolute;
+    /* position absolute so i can use top */
+    top: 30px;
+    left: 100px;
+    font-size: 50px;
+    z-index: 20;
+    cursor: pointer;
+    /* z-index, to be closer to me */
+}
+
+.logo::after {
+    content: attr(text-attr);
+    position: absolute;
+    color: transparent;
+    background-image: repeating-linear-gradient( 135deg, transparent 0, transparent 2px, var(--primary-color) 2px, var(--primary-color) 4px);
+    -webkit-background-clip: text;
+    top: 0px;
+    left: 0px;
+    transition: 1s;
+}
+
+.logo:hover:after {
+    top: -10px;
+    left: -10px;
+}
+
+
+/* TOOGLE CONTENT */
+
+.toggle {
+    position: fixed;
+    /* stay in the same position all the time */
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color) url(../images/menu.png);
+    /* background with an image */
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.toggle.active {
+    background: var(--primary-color) url(../images/close.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* NAVIGATION CONTENT */
+
+.navigation {
+    /*I have to cover everything*/
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 15;
+    /* button still visible because of z-index 15*/
+    display: flex;
+    /* set position by the "flex" */
+    justify-content: center;
+    /* center width */
+    align-items: center;
+    /* center height */
+    transition: 1.5s;
+}
+
+.navigation.active {
+    left: 0;
+    background-color: #9c9c9c;
+    transition: 1.5s;
+}
+
+.navigation ul {
+    position: relative;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    /* remove bullets */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.navigation ul li a {
+    font-size: 2.5rem;
+    color: #111;
+    text-decoration: none;
+    /* removes underline */
+    font-weight: 300;
+}
+
+.navigation ul li a:hover {
+    color: var(--primary-color)
+}
+
+.navigation .social-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation .social-bar a {
+    display: inline-block;
+    transform: scale(0.5);
+}
+
+.navigation .email-icon {
+    position: absolute;
+    bottom: 20px;
+    transform: scale(0.5);
+}
+
+.navigation .mobile {
+    display: none;
+}
+
+
+/* HOME CONTENT */
+
+.home-content {
+    position: relative;
+    z-index: 10;
+    max-width: 400px;
+}
+
+.home-img {
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    height: 90%;
+    transition: 2s;
+    /* height depend on the height of the browser */
+}
+
+
+/* CANVAS CONTENT */
+
+#canvas1 {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#ffffff, #505050);
+    z-index: -1;
+}
+
+
+/* PORTFOLIO CONTENT */
+
+.services {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.services.services .icon img {
+    max-width: 300px;
+}
+
+
+/* individual card */
+
+.services .service {
+    padding: 25px;
+}
+
+.services .service:hover {
+    box-shadow: 0 10px 30px var(--primary-color);
+    color: var(--primary-color)
+}
+
+
+/* CONTACT CONTENT */
+
+.contact {
+    width: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+    width: 100%;
+}
+
+.contact .info-box .contact-icon {
+    width: 20px;
+    margin: 0px 5px;
+}
+
+.contact .info-box h3 {
+    margin: 0px 20px 0px 0;
+}
+
+.contact .info-box a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* MEDIA QUERY */
+
+@media(max-width: 1060px) {
+    h1 {
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .home-img {
+        opacity: 30%;
+        transition: 2s;
+        height: 50%;
+    }
+    .logo {
+        top: 10px;
+        left: 40px;
+        font-size: 1.5rem;
+    }
+    section {
+        padding: 100px 40px;
+    }
+    .navigation ul li a {
+        font-size: 2rem;
+    }
+    .navigation .mobile {
+        display: unset;
+        position: absolute;
+        bottom: 0;
+        color: mediumturquoise;
+        border: 2px solid;
+        border-style: dotted;
+        padding: 10px 10px;
+        border-radius: 50%;
+    }
+    .services.services .icon img {
+        max-width: 100px;
+    }
+    .services {
+        gap: 20px;
+    }
+    .services .service {
+        padding: 15px;
+    }
+}
