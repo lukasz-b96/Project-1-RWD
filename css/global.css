@@ -160,7 +160,7 @@ section.home {
 
 .navigation.active {
     left: 0;
-    background-color: #9c9c9c;
+    background-color: #ff6f6f;
     transition: 1.5s;
 }
 
@@ -302,6 +302,37 @@ section.home {
 .contact .info-box a {
     color: black;
     text-decoration: none;
+}
+
+
+/* Clicker CONTENT */
+
+.clicker {
+    width: 1000px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clicker .clicker-inside button {
+    font-size: 1.5rem;
+    padding: 10px 10px;
+    margin: 0px 10px 0px;
+}
+
+.clicker .clicker-inside button:hover {
+    color: #f10f20;
+    border-radius: 10px;
+    transform: skew(-15deg);
+}
+
+.clicker .clicker-inside p {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 

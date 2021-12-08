@@ -44,33 +44,20 @@
         </div>
     </header>
     <!-- points attribute => amount of sides -->
-    <canvas id="canvas1" points=10> </canvas>
+    <canvas id="canvas1" points=2> </canvas>
     <section>
         <div class="title">
             <center>
-                <h1>Skontaktuj się!</h1>
-                <p>
-                    Można najechać kursorem na czerwono-czarny napis "Techniki WWW"
-                </p>
-                <p>
-                    Do powtórzonego kodu HTML mogłbym użyć templating engine np. "Jinja"
-                </p>
-                <p>
-                    Do stworzenia strony zostało użyte media-query oraz grafika 2d z "czystym" javascript
-                </p>
+                <h1 class="clicker-title">Prosty Clicker</h1>
         </div>
-        <div class="contact">
-            <div class="info-box">
-                <img src="images/email.png" class="contact-icon" alt="email">
-                <h3>E-mail:</h3>
-                <a href="mailto:lukasz96.baran@student.uj.edu.pl"> lukasz96.baran@student.uj.edu.pl</a>
-            </div>
-            <div class="info-box">
-                <img src="images/address.png" class="contact-icon" alt="adress">
-                <h3>Adress:</h3>
-                <p> 12 Krakowska,12-123 Krakow, Polska</p>
-            </div>
-
+        <div class="clicker">
+            <div class="clicker-inside">
+                
+                <button id="count">Count + 1</button>
+                <button id="reset">RESET</button>
+                <p id="output">0</p>
+            </div> 
+            
         </div>
     </section>
     <footer>

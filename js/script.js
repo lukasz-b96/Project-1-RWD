@@ -168,3 +168,18 @@ window.addEventListener('mouseleave',
 
 init()
 animate()
+
+
+/* CLICKER */
+
+var val = 0
+document.querySelector('#count').addEventListener('click', function() {
+    val++;
+    document.querySelector("#output").innerHTML = val;
+    this.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+});
+document.querySelector('#reset').addEventListener('click', function() {
+    val = 0
+    document.getElementById("count").style.backgroundColor = '';
+    document.querySelector("#output").innerHTML = val;
+});
