@@ -204,7 +204,7 @@ section.home {
     transform: scale(0.5);
 }
 
-.navigation .mobile {
+.mobile {
     display: none;
 }
 
@@ -243,7 +243,7 @@ section.home {
 
 /* PORTFOLIO CONTENT */
 
-.services {
+.dogs {
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -252,18 +252,14 @@ section.home {
     padding-bottom: 50px;
 }
 
-.services.services .icon img {
-    max-width: 300px;
-}
-
 
 /* individual card */
 
-.services .service {
+.dogs .dog-photos {
     padding: 25px;
 }
 
-.services .service:hover {
+.dogs .dog-photos:hover {
     box-shadow: 0 10px 30px var(--primary-color);
     color: var(--primary-color)
 }
@@ -308,7 +304,7 @@ section.home {
 /* Clicker CONTENT */
 
 .clicker {
-    width: 1000px;
+    width: 400px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -369,13 +365,27 @@ section.home {
         padding: 10px 10px;
         border-radius: 50%;
     }
-    .services.services .icon img {
+    .mobile {
+        display: unset;
+        position: fixed;
+        bottom: 0;
+        color: mediumturquoise;
+        border: 2px solid;
+        border-style: dotted;
+        padding: 10px 10px;
+        border-radius: 50%;
+        opacity: 50%;
+    }
+    .dogs {
+        margin-top: 0px;
+    }
+    .dogs.dogs .icon img {
         max-width: 100px;
     }
-    .services {
+    .dogs {
         gap: 20px;
     }
-    .services .service {
+    .dogs .dog-photos {
         padding: 15px;
     }
 }
